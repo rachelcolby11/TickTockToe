@@ -10,3 +10,23 @@ h1 {
   font-family: monospace;
   color: black;
 }
+
+#board {
+  margin: auto;
+  height: 390px;
+  width: 390px;
+  background-color: #FFD91F;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+td {
+  height: 130px;
+  width: 130px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  text-align: center;
+}
