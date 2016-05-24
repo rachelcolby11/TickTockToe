@@ -15,7 +15,6 @@ h1 {
   margin: auto;
   height: 390px;
   width: 390px;
-  background-color: #FFD91F;
 }
 
 .row {
@@ -26,7 +25,8 @@ h1 {
 td {
   height: 130px;
   width: 130px;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
   text-align: center;
+  background-color: #FFD91F;
 }
