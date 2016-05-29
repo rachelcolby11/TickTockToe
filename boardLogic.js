@@ -4,9 +4,8 @@
   // boardLogic functions set up the game board so that it's ready for game play
   window.boardLogic = {};
 
-	// creates each piece on the board; each piece is an object with coordinates (string value of column and row) and a state: null, 'X' or 'O'. default = null
-    //When the first player clicks on an empty square, the squares state should be changed to 'X', when the second player clicks on an empty square, the state should be changed to 'O'.
-
+	// createPiece creates each piece on the board; each piece is an object with coordinates (string value of column and row) and a state: null, 'X' or 'O'. default = null
+    // TO-DO: When the first player clicks on an empty square, the square's state should be changed to 'X', when the second player clicks on an empty square, the state should be changed to 'O'.
 	boardLogic.createPiece = function(coordinates){
 		var piece = {
 			name: 'piece',
@@ -16,10 +15,6 @@
 
 		return piece;
 	};
-
-
-  // Board holds the turnCount (Board.turnCount) which tells the program whether it's player 1 or player 2's turn.
-	// Board.board is the matrix itself.
 
 	boardLogic.createBoard = function(){
 		var Board = {
@@ -35,13 +30,15 @@
 			}
 		};
 
-    //Calling Board.resetBoard() creates a new 3 by 3 matrix where the states of each object are set to null.
+    // Calling Board.resetBoard() creates a new 3 by 3 matrix where the states of each object are set to null.
 		Board.resetBoard();
 
+    // Board holds the turnCount (Board.turnCount) which tells the program whether it's player 1 or player 2's turn.
+    // Board.board is the matrix itself.
 		return Board;
 	};
 
-
+  // creates matrix with dimensions num * num; calls createPiece to assign coordinates to each piece
 	boardLogic.create = function(num){
 		var board = _.range(num);
 		board.forEach(function(space, index, board){
