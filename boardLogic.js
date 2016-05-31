@@ -54,5 +54,21 @@
 
 	window.Board = boardLogic.createBoard();
 
+  // findSquare takes a string of coordinates and uses it to locate the square on the board that corresponds to the coordinates in the string. Once located, findSquare returns the selected square object.
+  boardLogic.findSquare = function(board, coordinates){
+    var result;
+    _.each(board, function(row){
+      if (result === undefined) {
+        result = _.find(row, function(square){
+          return square.coordinates === coordinates;
+        });
+      }
+    });
+    if (result === undefined) {
+      result = "square not found";
+    }
+
+    return result;
+  };
 
 })();
