@@ -71,4 +71,32 @@
     return result;
   };
 
+  // FUNCTIONS TO WRITE:
+
+  boardLogic.updateState = function(currentSquare, boardObject){
+		// check the square's state. If it's player 1's turn, change the current squares state to X. and return the square's state.
+		// if it's player 2's turn, change the current square's state to 'O' and return the square's state.
+		// if the square has already been used, return 'current square filled'
+	};
+
+	boardLogic.catsGame = function(board){
+		// look through the board and return true if all of the squares have been filled but no one has won.
+	};
+
+	boardLogic.checkHorizontalWin = function(currentSquare, board){
+	   // if every square in the currentSquare's row has the same state, that player has won.
+	};
+
+	boardLogic.checkVerticalWin = function(currentSquare, board){
+	   // if every square in the currentSquare's column has the same state, that player has won.
+	};
+
+	boardLogic.checkDiagonalWin = function(currentSquare, board){
+	   // if every square diagonal to the currentSquare has the same state, that player has won.
+	};
+
+  boardLogic.playAgain = function(prompt, board){
+     // if the player's prompt returns true, clear the state from each square in the board.
+  };
+
 })();
