@@ -1,14 +1,15 @@
 body {
   text-align: center;
   margin-top: 50px;
-  color: #FFF;
-  text-shadow: -1px -1px #FFD91F;
-  background-color: red;
+  color: #7AEDFC;
+  text-shadow: -1px -1px #1B08BA;
+  background-color: #7AEDFC;
 }
 
 h1 {
   font-family: monospace;
-  color: black;
+  color: #1B08BA;
+  text-shadow: none;
 }
 
 #board {
@@ -25,10 +26,9 @@ h1 {
 td {
   height: 130px;
   width: 130px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
+  border: 2px solid #1B08BA;
   text-align: center;
-  background-color: #FFD91F;
+  background-color: #1F81FF;
 }
 
 .X:before {
