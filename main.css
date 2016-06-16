@@ -30,3 +30,15 @@ td {
   text-align: center;
   background-color: #FFD91F;
 }
+
+.X:before {
+  font-family: monospace;
+  font-size: 200%;
+  content: 'X';
+}
+
+.O:before {
+  font-family: monospace;
+  font-size: 200%;
+  content: 'O';
+}

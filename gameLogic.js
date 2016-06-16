@@ -10,6 +10,15 @@ $(document).ready(function(){
 		var coordinates = this.attributes.id.nodeValue;
 		var squareObject = boardLogic.findSquare(Board, coordinates);
 		var currentState = squareObject.state;
-		
+		if (squareObject){
+			currentState = boardLogic.updateState(squareObject, boardObject);
+			if (currentState === 'X') {
+				this.classList.add('X');
+			 } else if (currentState === 'O'){
+				this.classList.add('O');
+		  } else if (currentState === 'square filled'){
+				alert('Sorry, this square is taken.');
+			}
+		}
 	});
 });

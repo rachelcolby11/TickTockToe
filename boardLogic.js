@@ -74,9 +74,21 @@
   // FUNCTIONS TO WRITE:
 
   boardLogic.updateState = function(currentSquare, boardObject){
-		// check the square's state. If it's player 1's turn, change the current squares state to X. and return the square's state.
-		// if it's player 2's turn, change the current square's state to 'O' and return the square's state.
-		// if the square has already been used, return 'current square filled'
+    // Check to see if the square has been filled
+    if (currentSquare.state === null) {
+      // If square is available, change its state to X or O depending on which player is taking their turn
+      if (boardObject.turnCount % 2 === 0) {
+        currentSquare.state = 'X';
+      } else {
+        currentSquare.state = 'O';
+      }
+      boardObject.turnCount++;
+
+    } else {
+      // If the square has already been used, update its state to 'square filled'.
+      currentSquare.state = 'square filled';
+    }
+    return currentSquare.state;
 	};
 
 	boardLogic.catsGame = function(board){
