@@ -5,7 +5,6 @@
   window.boardLogic = {};
 
 	// createPiece creates each piece on the board; each piece is an object with coordinates (string value of column and row) and a state: null, 'X' or 'O'. default = null
-    // TO-DO: When the first player clicks on an empty square, the square's state should be changed to 'X', when the second player clicks on an empty square, the state should be changed to 'O'.
 	boardLogic.createPiece = function(coordinates){
 		var piece = {
 			name: 'piece',
@@ -47,7 +46,6 @@
 			});
 			board[index] = row;
 		});
-
 		return board;
 	};
 
@@ -91,12 +89,23 @@
     return currentSquare.state;
 	};
 
-	boardLogic.catsGame = function(board){
-		// look through the board and return true if all of the squares have been filled but no one has won.
-	};
-
 	boardLogic.checkHorizontalWin = function(currentSquare, board){
-	   // if every square in the currentSquare's row has the same state, that player has won.
+	   // if every square in a row has the same state, player has won.
+     		if (_.every(board[0], function(element){return (element.state === 'X');})){
+          return true;
+        } else if (_.every(board[0], function(element){return (element.state === 'O');})){
+          return true;
+        } else if (_.every(board[1], function(element){return (element.state === 'X');})){
+          return true;
+        } else if (_.every(board[1], function(element){return (element.state === 'O');})){
+          return true;
+        } else if (_.every(board[2], function(element){return (element.state === 'X');})){
+          return true;
+        } else if (_.every(board[2], function(element){return (element.state === 'O');})){
+          return true;
+        } else {
+          return false;
+        }
 	};
 
 	boardLogic.checkVerticalWin = function(currentSquare, board){
@@ -106,6 +115,10 @@
 	boardLogic.checkDiagonalWin = function(currentSquare, board){
 	   // if every square diagonal to the currentSquare has the same state, that player has won.
 	};
+
+  boardLogic.catsGame = function(board){
+    // look through the board and return true if all of the squares have been filled but no one has won.
+  };
 
   boardLogic.playAgain = function(prompt, board){
      // if the player's prompt returns true, clear the state from each square in the board.

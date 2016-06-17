@@ -20,5 +20,10 @@ $(document).ready(function(){
 				alert('Sorry, this square is taken.');
 			}
 		}
+
+		if (boardLogic.checkHorizontalWin(squareObject, Board)){
+				confirm('You win! Play again?');
+			};
 	});
+
 });
