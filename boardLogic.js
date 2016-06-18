@@ -90,22 +90,15 @@
 	};
 
 	boardLogic.checkHorizontalWin = function(currentSquare, board){
-	   // if every square in a row has the same state, player has won.
-     		if (_.every(board[0], function(element){return (element.state === 'X');})){
-          return true;
-        } else if (_.every(board[0], function(element){return (element.state === 'O');})){
-          return true;
-        } else if (_.every(board[1], function(element){return (element.state === 'X');})){
-          return true;
-        } else if (_.every(board[1], function(element){return (element.state === 'O');})){
-          return true;
-        } else if (_.every(board[2], function(element){return (element.state === 'X');})){
-          return true;
-        } else if (_.every(board[2], function(element){return (element.state === 'O');})){
-          return true;
-        } else {
-          return false;
-        }
+     // if every square in the currentSquare's row has the same state, player has won.
+      var rowIndex  = currentSquare.coordinates[0];
+      if (_.every(board[rowIndex], function(element){return (element.state === 'X');})){
+        return true;
+      } else if (_.every(board[rowIndex], function(element){return (element.state === 'O');})){
+        return true;
+      } else {
+        return false;
+      }
 	};
 
 	boardLogic.checkVerticalWin = function(currentSquare, board){
