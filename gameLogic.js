@@ -23,6 +23,8 @@ $(document).ready(function(){
 
 		if (boardLogic.checkHorizontalWin(squareObject, Board)){
 				confirm('You win! Play again?');
+			} else if (boardLogic.checkVerticalWin(squareObject, Board)){
+				confirm('You win! Play again?');
 			};
 	});
 

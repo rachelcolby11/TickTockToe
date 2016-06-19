@@ -102,7 +102,24 @@
 	};
 
 	boardLogic.checkVerticalWin = function(currentSquare, board){
-	   // if every square in the currentSquare's column has the same state, that player has won.
+    // if every square in the currentSquare's column has the same state, that player has won.
+      // find the column of currentSquare
+      var currentColumn;
+      if (currentSquare.coordinates[1] === '0') {
+         currentColumn = [board[0][0], board[1][0], board[2][0]];
+       } else if (currentSquare.coordinates[1] === '1') {
+         currentColumn = [board[0][1], board[1][1], board[2][1]];
+       } else if (currentSquare.coordinates[1] === '2') {
+         currentColumn = [board[0][2], board[1][2], board[2][2]];
+       }
+       // check to see if the squares in the column have the same state
+       if (_.every(currentColumn, function(element){return (element.state === 'X');})){
+         return true;
+       } else if (_.every(currentColumn, function(element){return (element.state === 'O');})){
+         return true;
+       } else {
+         return false;
+       }
 	};
 
 	boardLogic.checkDiagonalWin = function(currentSquare, board){
