@@ -123,7 +123,21 @@
 	};
 
 	boardLogic.checkDiagonalWin = function(currentSquare, board){
-	   // if every square diagonal to the currentSquare has the same state, that player has won.
+    // If 3 diagonal squares have the same state, the player has won.
+    var diagonal1 = [board[0][0], board[1][1], board[2][2]];
+    var diagonal2 = [board[2][0], board[1][1], board[0][2]];
+    if (_.every(diagonal1, function(element){return (element.state === 'X');})){
+      return true;
+    } else if (_.every(diagonal1, function(element){return (element.state === 'O');})){
+      return true;
+    } else if (_.every(diagonal2, function(element){return (element.state === 'X');})){
+        return true;
+    } else if (_.every(diagonal2, function(element){return (element.state === 'O');})){
+        return true;
+    } else {
+      return false;
+    }
+
 	};
 
   boardLogic.catsGame = function(board){
