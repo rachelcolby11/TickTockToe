@@ -141,7 +141,20 @@
 	};
 
   boardLogic.catsGame = function(board){
-    // look through the board and return true if all of the squares have been filled but no one has won.
+    // look through the board and return true if all of the squares have been filled
+    var allSquareStates = [];
+    // loop through the rows of the board; push the state of each square into allSquareStates array
+    board.forEach(function(row){
+      row.forEach(function(square){
+        allSquareStates.push(square.state);
+      })
+    });
+    // check the allSquareStates array to see whether any squares' states are null
+    if (_.any(allSquareStates, function(state){return (state === null);})){
+      return false;
+    } else {
+      return true;
+    }
   };
 
   boardLogic.playAgain = function(prompt, board){

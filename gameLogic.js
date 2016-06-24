@@ -27,6 +27,8 @@ $(document).ready(function(){
 				confirm('You win! Play again?');
 			} else if (boardLogic.checkDiagonalWin(squareObject, Board)) {
 				confirm('You win! Play again?');
+			} else if (boardLogic.catsGame(Board)) {
+				confirm('Cat\'s game! Play again?');
 			}
 	});
 
