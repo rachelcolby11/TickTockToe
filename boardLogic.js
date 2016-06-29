@@ -157,8 +157,21 @@
     }
   };
 
-  boardLogic.playAgain = function(prompt, board){
+  boardLogic.playAgain = function(playAgain, board){
      // if the player's prompt returns true, clear the state from each square in the board.
+     if (playAgain){
+       $('#board').hide();
+       Board.resetBoard();
+       Board.resetTurnCount();
+       board.forEach(function(row){
+         row.forEach(function(square){
+            square.state = null;
+         });
+      });
+      $('.square').removeClass('X');
+      $('.square').removeClass('O');
+      $('#board').fadeIn(3000);
+     }
   };
 
 })();

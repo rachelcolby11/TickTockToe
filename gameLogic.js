@@ -14,7 +14,7 @@ $(document).ready(function(){
 			currentState = boardLogic.updateState(squareObject, boardObject);
 			if (currentState === 'X') {
 				this.classList.add('X');
-			 } else if (currentState === 'O'){
+			} else if (currentState === 'O'){
 				this.classList.add('O');
 		  } else if (currentState === 'square filled'){
 				alert('Sorry, this square is taken.');
@@ -22,13 +22,17 @@ $(document).ready(function(){
 		}
 
 		if (boardLogic.checkHorizontalWin(squareObject, Board)){
-				confirm('You win! Play again?');
+				var playAgain = confirm('You win! Play again?');
+				boardLogic.playAgain(playAgain, Board);
 			} else if (boardLogic.checkVerticalWin(squareObject, Board)){
-				confirm('You win! Play again?');
+				var playAgain = confirm('You win! Play again?');
+				boardLogic.playAgain(playAgain, Board);
 			} else if (boardLogic.checkDiagonalWin(squareObject, Board)) {
-				confirm('You win! Play again?');
+				var playAgain = confirm('You win! Play again?');
+				boardLogic.playAgain(playAgain, Board);
 			} else if (boardLogic.catsGame(Board)) {
-				confirm('Cat\'s game! Play again?');
+				var playAgain = confirm('Cat\'s game! Play again?');
+				boardLogic.playAgain(playAgain, Board);
 			}
 	});
 
