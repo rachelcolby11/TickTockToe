@@ -9,8 +9,15 @@ var timer = function() {
   }
 }
 
+var countdown;
+
 function startTimer() {
-  var countdown = window.setInterval(timer, 1000);
+  countdown = window.setInterval(timer, 1000);
+}
+
+function stopTimer() {
+  clearInterval(countdown);
 }
 
 $('#start').click(startTimer);
+$('#pause').click(stopTimer);
