@@ -19,5 +19,11 @@ function stopTimer() {
   clearInterval(countdown);
 }
 
+function resetTimer() {
+  clearInterval(countdown);
+  timeLeft = 8;
+  $('#timer').html(timeLeft);
+}
+
 $('#start').click(startTimer);
 $('#pause').click(stopTimer);

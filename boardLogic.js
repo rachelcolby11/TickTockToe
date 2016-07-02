@@ -69,8 +69,6 @@
     return result;
   };
 
-  // FUNCTIONS TO WRITE:
-
   boardLogic.updateState = function(currentSquare, boardObject){
     // Check to see if the square has been filled
     if (currentSquare.state === null) {
@@ -159,6 +157,7 @@
 
   boardLogic.playAgain = function(playAgain, board){
      // if the player's prompt returns true, clear the state from each square in the board.
+     stopTimer();
      if (playAgain){
        $('#board').hide();
        Board.resetBoard();
@@ -171,6 +170,7 @@
       $('.square').removeClass('X');
       $('.square').removeClass('O');
       $('#board').fadeIn(3000);
+      resetTimer();
      }
   };
 
