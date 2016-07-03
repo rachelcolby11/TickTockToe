@@ -19,8 +19,6 @@ $(document).ready(function(){
 		  } else if (currentState === 'square filled'){
 				alert('Sorry, this square is taken.');
 			}
-			resetTimer();
-			startTimer();
 		}
 
 		if (boardLogic.checkHorizontalWin(squareObject, Board)){

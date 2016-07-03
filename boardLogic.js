@@ -79,6 +79,8 @@
         currentSquare.state = 'O';
       }
       boardObject.turnCount++;
+      resetTimer();
+      startTimer();
 
     } else {
       // If the square has already been used, update its state to 'square filled'.
