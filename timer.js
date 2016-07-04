@@ -4,9 +4,13 @@ var timeLeft = 8;
 
 var timer = function() {
   if (timeLeft > 0) {
-    $('#timer').html(timeLeft);
     timeLeft--;
+  } else {
+    alert('He who hesitates is lost! Sorry, you lost your turn :(');
+    Board.turnCount++;
+    timeLeft = 8;
   }
+  $('#timer').html(timeLeft);
 }
 
 var countdown;
