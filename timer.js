@@ -1,6 +1,6 @@
 // Keeps time for each player's turn
 
-var timeLeft = 8;
+var timeLeft = 5;
 
 var timer = function() {
   if (timeLeft > 0) {
@@ -8,7 +8,7 @@ var timer = function() {
   } else {
     alert('He who hesitates is lost! Sorry, you lost your turn :(');
     Board.turnCount++;
-    timeLeft = 8;
+    timeLeft = 5;
   }
   $('#timer').html(timeLeft);
 }
@@ -25,7 +25,7 @@ function stopTimer() {
 
 function resetTimer() {
   clearInterval(countdown);
-  timeLeft = 8;
+  timeLeft = 5;
   $('#timer').html(timeLeft);
 }
 
