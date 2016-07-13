@@ -1,6 +1,6 @@
 ##TickTockToe
 
-TickTockToe is a tic-tac-toe game with a time limit! Players must make a move quickly, or after five seconds they lose their turn! I built TickTockToe using native JavaScript along with jQuery and the Underscore library.
+TickTockToe is a tic-tac-toe game with a time limit! Players must make a move quickly, or after five seconds they lose their turn! I built TickTockToe using native JavaScript along with [jQuery](https://jquery.com/) and the [Underscore library](http://underscorejs.org/).
 
 ###Game Play
 
