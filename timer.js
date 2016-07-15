@@ -15,15 +15,15 @@ var timer = function() {
 
 var countdown;
 
-function startTimer() {
+var startTimer = function() {
   countdown = window.setInterval(timer, 1000);
 }
 
-function stopTimer() {
+var stopTimer = function() {
   clearInterval(countdown);
 }
 
-function resetTimer() {
+var resetTimer = function() {
   clearInterval(countdown);
   timeLeft = 5;
   $('#timer').html(timeLeft);
