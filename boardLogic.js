@@ -173,7 +173,6 @@
       $('.square').removeClass('X');
       $('.square').removeClass('O');
       $('#board').fadeIn(3000);
-      resetTimer();
      }
   };
 
