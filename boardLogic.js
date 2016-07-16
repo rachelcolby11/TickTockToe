@@ -80,6 +80,7 @@
       }
       boardObject.turnCount++;
       resetTimer();
+      $(document.body).removeClass();
       startTimer();
 
     } else {

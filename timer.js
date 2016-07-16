@@ -2,6 +2,17 @@
 
 var timeLeft = 5;
 
+// Use the default blue background color if more than 3 seconds left. Set background color to yellow at 3 seconds remaining and red at one second remaining
+var setColor = function() {
+  if (timeLeft > 3) {
+    $(document.body).removeClass()
+  } else if (timeLeft > 1) {
+    $(document.body).removeClass().addClass('yellow');
+  } else {
+    $(document.body).removeClass().addClass('red');
+  }
+}
+
 var timer = function() {
   if (timeLeft > 0) {
     timeLeft--;
@@ -11,6 +22,7 @@ var timer = function() {
     timeLeft = 5;
   }
   $('#timer').html(timeLeft);
+  setColor();
 }
 
 var countdown;

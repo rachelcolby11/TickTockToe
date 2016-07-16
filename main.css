@@ -6,6 +6,18 @@ body {
   background-color: #7AEDFC;
 }
 
+.blue {
+  background-color: #7AEDFC;
+}
+
+.yellow {
+  background-color: #FBFF05;
+}
+
+.red {
+  background-color: #FF0505;
+}
+
 h1 {
   font-family: monospace;
   color: #1B08BA;
