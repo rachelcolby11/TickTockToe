@@ -2,7 +2,7 @@ body {
   text-align: center;
   margin-top: 50px;
   color: #7AEDFC;
-  text-shadow: -1px -1px #1B08BA;
+  text-shadow: 1px 1px #1B08BA;
   background-color: #7AEDFC;
   font-family: serif;
 }
@@ -21,8 +21,8 @@ body {
 
 h1 {
   font-family: Georgia, serif;
-  color: #1B08BA;
-  text-shadow: -1px -1px #1B08BA;
+  color: #1F56FF;
+  text-shadow: 1px 1px black;
 }
 
 h2 {
