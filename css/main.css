@@ -4,6 +4,7 @@ body {
   color: #7AEDFC;
   text-shadow: -1px -1px #1B08BA;
   background-color: #7AEDFC;
+  font-family: serif;
 }
 
 .blue {
@@ -19,9 +20,9 @@ body {
 }
 
 h1 {
-  font-family: monospace;
+  font-family: Georgia, serif;
   color: #1B08BA;
-  text-shadow: none;
+  text-shadow: -1px -1px #1B08BA;
 }
 
 h2 {
@@ -63,13 +64,13 @@ button {
 }
 
 .X:before {
-  font-family: monospace;
-  font-size: 200%;
+  font-family: monospace, serif;
+  font-size: 240%;
   content: 'X';
 }
 
 .O:before {
-  font-family: monospace;
-  font-size: 200%;
+  font-family: monospace, serif;
+  font-size: 240%;
   content: 'O';
 }
