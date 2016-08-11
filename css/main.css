@@ -43,7 +43,7 @@ h2 {
 td {
   height: 130px;
   width: 130px;
-  border: 2px solid #1B08BA;
+  border: 3px solid #1B08BA;
   text-align: center;
   background-color: #1F81FF;
 }
@@ -51,7 +51,7 @@ td {
 #clock {
   width: 100px;
   padding: 3px;
-  border: 2px solid #1B08BA;
+  border: 3px solid #1B08BA;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
