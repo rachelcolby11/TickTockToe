@@ -60,9 +60,16 @@ td {
 
 button {
   width: 45px;
-  background-color: #7AEDFC;
-  border: 2px solid #1B08BA;
+  border: 1.2px solid #1B08BA;
   display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #7AEDFC;
+  background-color: #1B08BA;
+  background: -webkit-linear-gradient(#1F81FF, #1B08BA);
+  background: linear-gradient(#1F81FF, #1B08BA);
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .X:before {
