@@ -61,6 +61,8 @@ td {
 button {
   width: 45px;
   background-color: #7AEDFC;
+  border: 2px solid #1B08BA;
+  display: inline-block;
 }
 
 .X:before {
