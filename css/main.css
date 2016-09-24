@@ -88,3 +88,20 @@ button {
   font-size: 240%;
   content: 'O';
 }
+
+@media (max-width: 510px) {
+  div.game-container {
+    height: 300px;
+    width: 300px;
+  }
+  #clock {
+    width: 65%;
+  }
+  button {
+    margin: auto;
+    display: block;
+    width: 100%;
+    font-size: .55em;
+  }
+
+}
