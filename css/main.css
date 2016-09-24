@@ -89,7 +89,7 @@ button {
   content: 'O';
 }
 
-@media (max-width: 510px) {
+@media screen and (max-width: 510px) {
   div.game-container {
     height: 300px;
     width: 300px;
