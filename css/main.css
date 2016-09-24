@@ -1,10 +1,15 @@
 body {
   text-align: center;
-  margin-top: 50px;
   color: #7AEDFC;
   text-shadow: 1px 1px #1B08BA;
   background-color: #7AEDFC;
   font-family: serif;
+}
+
+div.game-container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
 }
 
 .blue {
@@ -31,8 +36,8 @@ h2 {
 
 #board {
   margin: auto;
-  height: 390px;
-  width: 390px;
+  height: 80%; /* 400px */
+  width: 80%;
 }
 
 .row {
@@ -41,25 +46,25 @@ h2 {
 }
 
 td {
-  height: 130px;
-  width: 130px;
+  height: 33.333333%;
+  width: 33.333333%;
   border: 3px solid #1B08BA;
   text-align: center;
   background-color: #1F81FF;
 }
 
 #clock {
-  width: 100px;
+  width: 20%; /* 100px */
   padding: 3px;
   border: 3px solid #1B08BA;
-  margin-top: 10px;
+  margin-top: 4%;
   margin-left: auto;
   margin-right: auto;
   background-color: #1F81FF;
 }
 
 button {
-  width: 45px;
+  width: 45%;
   border: 1.2px solid #1B08BA;
   display: inline-block;
   font-size: 10px;
