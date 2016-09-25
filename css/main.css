@@ -95,21 +95,21 @@ button {
     width: 340px;
   }
   #clock {
-    width: 65%;
+    width: 50%; /* 221 px */
     padding: 0;
-    border: none;
   }
   #timer {
     padding: 5% 0;
     font-size: 2em;
-    border: 3px solid #1B08BA;
   }
   button {
-    margin: 0;
-    display: block;
-    padding: 6%;
-    width: 100%;
+    margin-bottom: 2%;
+    padding: 6% 2%;
+    width: 45%;
     font-size: .55em;
     border-radius: 0;
+    background-image: none;
+    color: #1B08BA;
+    background-color: #7AEDFC;
   }
 }
